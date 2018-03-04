@@ -35,13 +35,20 @@ hbs.registerHelper('screamIt', (text) => text.toUpperCase());
 app.get('/', (req, res) => {
   res.render('home.hbs', {
     pageTitle: 'Home page',
-    welcomeMessage: 'Welcome to our website, wanker!'
+    welcomeMessage: 'Welcome to our website.'
   });
 });
 
 app.get('/about', (req, res) => {
   res.render('about.hbs', {
     pageTitle: "About page"
+  });
+});
+
+app.get('/projects', (req, res) => {
+  res.render('projects.hbs', {
+    pageTitle: 'Projects page',
+    welcomeMessage: 'Welcome to our projects page.'
   });
 });
 
